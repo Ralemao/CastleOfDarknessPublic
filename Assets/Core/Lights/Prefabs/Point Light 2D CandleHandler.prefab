@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5820213744218085678
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2250905145483692647, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749040, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_Name
+      value: Point Light 2D CandleHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749041, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749041, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_Color.g
+      value: 0.58055234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749041, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749041, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LightOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749041, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749041, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726470225854310729, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
