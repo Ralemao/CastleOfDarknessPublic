@@ -71,7 +71,16 @@ public class PlayerCollider : MonoBehaviour
 
     private void Update()
     {
+        SetGravity();
         Interactions();
+    }
+
+    private void SetGravity()
+    {
+        if (!CheckIsGrounded())
+            PlayerMovement.Instance.RB2D().gravityScale = 40;
+        else
+            PlayerMovement.Instance.RB2D().gravityScale = 1;
     }
 
     private void Interactions()

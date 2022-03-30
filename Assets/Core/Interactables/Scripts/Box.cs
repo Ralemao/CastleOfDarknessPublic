@@ -46,7 +46,7 @@ public class Box : MonoBehaviour
         else
         {
             this.InteractionButton(false);
-            this._rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+            this._rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 
