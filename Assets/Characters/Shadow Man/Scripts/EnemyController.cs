@@ -13,29 +13,27 @@ public class EnemyController : MonoBehaviour
     }
 
     //Singleton instantation
-    private static EnemyController instance;
+    private static EnemyController _instance;
     public static EnemyController Instance
     {
         get
         {
-            if (instance == null)
-                instance = GameObject.FindObjectOfType<EnemyController>();
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<EnemyController>();
 
-            return instance;
+            return _instance;
         }
     }
 
     void Awake()
     {
-        instance = this;
+        _instance = this;
         _canMove = true;
     }
 
     void Update()
     {
         _isGrounded = EnemyCollider.Instance.CheckIsGrounded();
-
-        //if (!_canMove) return;
 
         EnemyMovement.Instance.enabled = _canMove;
         EnemyCollider.Instance.enabled = _canMove;

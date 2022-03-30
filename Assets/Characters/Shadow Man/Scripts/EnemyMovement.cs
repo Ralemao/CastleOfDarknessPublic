@@ -33,21 +33,21 @@ public class EnemyMovement : MonoBehaviour
     private CapsuleCollider2D _collider;
     private Transform _player;
 
-    private static EnemyMovement instance;
+    private static EnemyMovement _instance;
     public static EnemyMovement Instance
     {
         get
         {
-            if (instance == null)
-                instance = GameObject.FindObjectOfType<EnemyMovement>();
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<EnemyMovement>();
 
-            return instance;
+            return _instance;
         }
     }
 
     private void Awake()
     {
-        instance = this;
+        _instance = this;
         _isRight = true;
         _collider = GetComponent<CapsuleCollider2D>();
         _player = GameObject.FindGameObjectWithTag("Player").transform;

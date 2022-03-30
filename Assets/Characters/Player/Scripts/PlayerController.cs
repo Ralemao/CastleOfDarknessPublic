@@ -13,29 +13,27 @@ public class PlayerController : MonoBehaviour
     }
 
     //Singleton instantation
-    private static PlayerController instance;
+    private static PlayerController _instance;
     public static PlayerController Instance
     {
         get
         {
-            if (instance == null)
-                instance = GameObject.FindObjectOfType<PlayerController>();
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<PlayerController>();
 
-            return instance;
+            return _instance;
         }
     }
 
     void Awake()
     {
-        instance = this;
+        _instance = this;
         _canMove = true;
     }
 
     void Update()
     {
         _isGrounded = PlayerCollider.Instance.CheckIsGrounded();
-
-        //if (!_canMove) return;
 
         PlayerMovement.Instance.enabled = _canMove;
         PlayerCollider.Instance.enabled = _canMove;

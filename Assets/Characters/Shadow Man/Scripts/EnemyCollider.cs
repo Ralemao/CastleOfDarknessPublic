@@ -29,21 +29,21 @@ public class EnemyCollider : MonoBehaviour
     [SerializeField]
     private LayerMask _groundLayer;
 
-    private static EnemyCollider instance;
+    private static EnemyCollider _instance;
     public static EnemyCollider Instance
     {
         get
         {
-            if (instance == null)
-                instance = GameObject.FindObjectOfType<EnemyCollider>();
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<EnemyCollider>();
 
-            return instance;
+            return _instance;
         }
     }
 
     private void Awake()
     {
-        instance = this;
+        _instance = this;
     }
 
     void Update()

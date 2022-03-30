@@ -11,21 +11,21 @@ public class EnemyAnimation : MonoBehaviour
         return _anim;
     }
 
-    private static EnemyAnimation instance;
+    private static EnemyAnimation _instance;
     public static EnemyAnimation Instance
     {
         get
         {
-            if (instance == null)
-                instance = GameObject.FindObjectOfType<EnemyAnimation>();
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<EnemyAnimation>();
 
-            return instance;
+            return _instance;
         }
     }
 
     private void Awake()
     {
-        instance = this;
+        _instance = this;
         _anim = transform.GetChild(0).GetComponent<Animator>();
     }
 

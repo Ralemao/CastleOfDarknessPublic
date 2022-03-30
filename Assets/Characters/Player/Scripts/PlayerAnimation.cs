@@ -12,21 +12,21 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     //Singleton instantation
-    private static PlayerAnimation instance;
+    private static PlayerAnimation _instance;
     public static PlayerAnimation Instance
     {
         get
         {
-            if (instance == null)
-                instance = GameObject.FindObjectOfType<PlayerAnimation>();
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<PlayerAnimation>();
 
-            return instance;
+            return _instance;
         }
     }
 
     void Awake()
     {
-        instance = this;
+        _instance = this;
         _anim = transform.GetChild(0).GetComponent<Animator>();
     }
 

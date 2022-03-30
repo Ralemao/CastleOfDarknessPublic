@@ -51,21 +51,21 @@ public class PlayerCollider : MonoBehaviour
     }
 
     //Singleton instantation
-    private static PlayerCollider instance;
+    private static PlayerCollider _instance;
     public static PlayerCollider Instance
     {
         get
         {
-            if (instance == null)
-                instance = GameObject.FindObjectOfType<PlayerCollider>();
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<PlayerCollider>();
 
-            return instance;
+            return _instance;
         }
     }
 
     void Awake()
     {
-        instance = this;
+        _instance = this;
         _playerParent = transform.parent;
     }
 

@@ -42,21 +42,21 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //Singleton instantation
-    private static PlayerMovement instance;
+    private static PlayerMovement _instance;
     public static PlayerMovement Instance
     {
         get
         {
-            if (instance == null)
-                instance = GameObject.FindObjectOfType<PlayerMovement>();
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<PlayerMovement>();
 
-            return instance;
+            return _instance;
         }
     }
 
     void Awake()
     {
-        instance = this;
+        _instance = this;
         _isRight = true;
         _rb2D = GetComponent<Rigidbody2D>();
     }
