@@ -48,6 +48,10 @@ public class EnemyMovement : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+    }
+
+    void Start()
+    {
         _isRight = true;
         _collider = GetComponent<CapsuleCollider2D>();
         _player = GameObject.FindGameObjectWithTag("Player").transform;

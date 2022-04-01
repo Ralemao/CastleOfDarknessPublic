@@ -57,6 +57,10 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         _instance = this;
+    }
+
+    void Start()
+    {
         _isRight = true;
         _rb2D = GetComponent<Rigidbody2D>();
     }

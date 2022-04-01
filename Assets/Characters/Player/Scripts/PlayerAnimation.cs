@@ -27,6 +27,10 @@ public class PlayerAnimation : MonoBehaviour
     void Awake()
     {
         _instance = this;
+    }
+
+    void Start()
+    {
         _anim = transform.GetChild(0).GetComponent<Animator>();
     }
 

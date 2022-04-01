@@ -31,33 +31,33 @@ public class Box : MonoBehaviour
 
     private void Update()
     {
-        this.PushMovement();
+        PushMovement();
     }
 
     private void PushMovement()
     {
-        if (!this._isBeenPush)
+        if (!_isBeenPush)
         {
-            if (this._isGrounded)
-                this._rb2D.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            if (_isGrounded)
+                _rb2D.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             else
-                this.GetComponent<FixedJoint2D>().enabled = false;
+                GetComponent<FixedJoint2D>().enabled = false;
         }
         else
         {
-            this.InteractionButton(false);
-            this._rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+            InteractionButton(false);
+            _rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 
     public void InteractionButton(bool value)
     {
-        this._interactionButton.SetActive(value);
+        _interactionButton.SetActive(value);
     }
 
     public void SetPush(bool value)
     {
-        this._isBeenPush = value;
+        _isBeenPush = value;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -65,16 +65,16 @@ public class Box : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Ground":
-                this._isGrounded = true;
+                _isGrounded = true;
                 break;
 
             case "Box":
-                this._isGrounded = true;
+                _isGrounded = true;
                 break;
 
             case "Player":
-                if(collision.gameObject.GetComponent<PlayerCollider>().GetObj() != null && !this._isTrigged)
-                    this.InteractionButton(true);
+                if(collision.gameObject.GetComponent<PlayerCollider>().GetObj() != null && !_isTrigged)
+                    InteractionButton(true);
                 break;
         }
     }
@@ -84,13 +84,13 @@ public class Box : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Box":
-                this._isGrounded = false;
-                this.SetPush(false);
+                _isGrounded = false;
+                SetPush(false);
                 break;
 
             case "Player":
-                this.SetPush(false);
-                this.InteractionButton(false);
+                SetPush(false);
+                InteractionButton(false);
                 break;
         }
     }
@@ -100,8 +100,8 @@ public class Box : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
-                this._rb2D.isKinematic = true;
-                this._isTrigged = true;
+                _rb2D.isKinematic = true;
+                _isTrigged = true;
                 break;
         }
     }
@@ -111,8 +111,8 @@ public class Box : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
-                this._rb2D.isKinematic = false;
-                this._isTrigged = false;
+                _rb2D.isKinematic = false;
+                _isTrigged = false;
                 break;
         }
     }

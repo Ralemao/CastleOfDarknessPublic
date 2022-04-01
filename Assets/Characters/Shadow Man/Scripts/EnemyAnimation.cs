@@ -26,6 +26,10 @@ public class EnemyAnimation : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+    }
+
+    void Start()
+    {
         _anim = transform.GetChild(0).GetComponent<Animator>();
     }
 

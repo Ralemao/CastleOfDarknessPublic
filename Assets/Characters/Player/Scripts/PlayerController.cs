@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    private float _deathTimer;
     private bool _canMove;
     private bool _isGrounded;
 
@@ -28,6 +30,10 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         _instance = this;
+    }
+
+    void Start()
+    {
         _canMove = true;
     }
 
@@ -37,5 +43,17 @@ public class PlayerController : MonoBehaviour
 
         PlayerMovement.Instance.enabled = _canMove;
         PlayerCollider.Instance.enabled = _canMove;
+    }
+
+    public void SetDeath()
+    {
+        _canMove = false;
+        StartCoroutine(CanMove());
+    }
+
+    IEnumerator CanMove()
+    {
+        yield return new WaitForSeconds(_deathTimer);
+        _canMove = true;
     }
 }

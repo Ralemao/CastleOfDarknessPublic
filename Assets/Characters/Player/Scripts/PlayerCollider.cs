@@ -66,6 +66,10 @@ public class PlayerCollider : MonoBehaviour
     void Awake()
     {
         _instance = this;
+    }
+
+    void Start()
+    {
         _playerParent = transform.parent;
     }
 

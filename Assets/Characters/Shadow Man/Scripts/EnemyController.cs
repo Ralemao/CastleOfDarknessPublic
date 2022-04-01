@@ -28,6 +28,10 @@ public class EnemyController : MonoBehaviour
     void Awake()
     {
         _instance = this;
+    }
+
+    void Start()
+    {
         _canMove = true;
     }
 
