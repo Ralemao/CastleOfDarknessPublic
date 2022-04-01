@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 4149262256801966548}
   - component: {fileID: 520391734376764099}
   m_Layer: 3
-  m_Name: Sprite Light 2D
+  m_Name: Sprite_Light_2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355,6 +355,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6381703681279762793}
     m_Modifications:
+    - target: {fileID: 2127335103297080304, guid: 90dec1ee254a3824fa66a83755e351c5, type: 3}
+      propertyPath: m_Name
+      value: Point_Light_2D_CandleHandler
+      objectReference: {fileID: 0}
     - target: {fileID: 7280647474502698955, guid: 90dec1ee254a3824fa66a83755e351c5, type: 3}
       propertyPath: m_RootOrder
       value: 2

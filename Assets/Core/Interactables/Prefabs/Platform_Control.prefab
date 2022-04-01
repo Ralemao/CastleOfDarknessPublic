@@ -197,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3897479202728200423}
   m_Layer: 6
-  m_Name: Platform Control
+  m_Name: Platform_Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

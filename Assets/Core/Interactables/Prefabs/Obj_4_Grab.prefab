@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9020691843805402522}
   - component: {fileID: 9020691843805402533}
   m_Layer: 8
-  m_Name: Obj4Grab
+  m_Name: Obj_4_Grab
   m_TagString: Grabbable
   m_Icon: {fileID: 2800000, guid: 7afac7287fbef4e4eb1ba5d37fb251b1, type: 3}
   m_NavMeshLayer: 0

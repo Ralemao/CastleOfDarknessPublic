@@ -13,7 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235920972335749040, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
       propertyPath: m_Name
-      value: Point Light 2D Yellow
+      value: Point_Light_2D_Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235920972335749041, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6235920972335749042, guid: 1eb14c34cae2bc147b809ffb7d2c9f72, type: 3}
       propertyPath: m_RootOrder
