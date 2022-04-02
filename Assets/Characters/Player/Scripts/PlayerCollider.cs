@@ -40,6 +40,8 @@ public class PlayerCollider : MonoBehaviour
 
     [Header("References")]
     [SerializeField]
+    private Transform _interactionButton;
+    [SerializeField]
     private Transform _playerGrab;
     private Transform _playerParent;
 
@@ -82,9 +84,9 @@ public class PlayerCollider : MonoBehaviour
     private void SetGravity()
     {
         if (!CheckIsGrounded())
-            PlayerMovement.Instance.RB2D().gravityScale = 40;
+            PlayerMovement.Instance.GetRB2D().gravityScale = 40;
         else
-            PlayerMovement.Instance.RB2D().gravityScale = 1;
+            PlayerMovement.Instance.GetRB2D().gravityScale = 1;
     }
 
     private void Interactions()
@@ -111,11 +113,14 @@ public class PlayerCollider : MonoBehaviour
 
                 if (_isGrabbing)
                 {
+                    InteractionButton(false);
                     _obj.GetComponent<Grabbable>().transform.SetParent(_playerGrab);
-                    _obj.GetComponent<Grabbable>().InteractionButton(false);
                 }
                 else
+                {
+                    InteractionButton(true);
                     _obj.GetComponent<Grabbable>().transform.SetParent(_obj.GetComponent<Grabbable>().GetGroupParent());
+                }
             }
 
             //Boxes interactions
@@ -126,10 +131,13 @@ public class PlayerCollider : MonoBehaviour
                 if (objBox != null)
                 {
                     //Climb
-                    if (CheckIsGrounded() && PlayerMovement.Instance.CurrentSpeed() == 0)
+                    if (CheckIsGrounded() && PlayerMovement.Instance.CurrentSpeed() == 0 && !_canClimb)
                     {
+                        InteractionButton(true);
+
                         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) && !_isPushing)
                             _canClimb = true;
+
                         if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
                             _canClimb = false;
                     }
@@ -138,7 +146,7 @@ public class PlayerCollider : MonoBehaviour
                     if (!highHit && lowHit && _canClimb)
                     {
                         _isClimbing = true;
-                        objBox.InteractionButton(false);
+                        InteractionButton(false);
                     }
 
                     //Push and pull obj
@@ -148,6 +156,10 @@ public class PlayerCollider : MonoBehaviour
                         {
                             _isPushing = false;
                             objBox.SetPush(false);
+
+                            if (Input.GetKeyUp(KeyCode.E))
+                                InteractionButton(true);
+
                             _obj.GetComponent<FixedJoint2D>().enabled = false;
                             _obj.GetComponent<FixedJoint2D>().connectedBody = null;
                             objBox = null;
@@ -159,9 +171,9 @@ public class PlayerCollider : MonoBehaviour
                         {
                             _isPushing = true;
                             objBox.SetPush(true);
-                            objBox.InteractionButton(false);
+                            InteractionButton(false);
                             _obj.GetComponent<FixedJoint2D>().enabled = true;
-                            _obj.GetComponent<FixedJoint2D>().connectedBody = PlayerMovement.Instance.RB2D();
+                            _obj.GetComponent<FixedJoint2D>().connectedBody = PlayerMovement.Instance.GetRB2D();
                         }
                     }
                 }
@@ -169,6 +181,7 @@ public class PlayerCollider : MonoBehaviour
         }
         else
         {
+            InteractionButton(false);
             _obj = null;
             if(_canClimb) _canClimb = false;
             if(_isPushing) _isPushing = false;
@@ -188,6 +201,14 @@ public class PlayerCollider : MonoBehaviour
         Gizmos.DrawLine(new Vector2(transform.position.x, transform.position.y + _highYRayPos),
                         new Vector2(transform.position.x, transform.position.y + _highYRayPos) +
                             Vector2.right * transform.localScale.x * _highRayDistance);
+    }
+
+    public void InteractionButton(bool value)
+    {
+        _interactionButton.gameObject.SetActive(value);
+
+        if (value)
+            _interactionButton.transform.position = _obj.transform.GetChild(1).transform.position;
     }
 
     private void AddToInventory()

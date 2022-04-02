@@ -15,7 +15,7 @@ public class Box : MonoBehaviour
     }
 
     [SerializeField]
-    private GameObject _interactionButton;
+    private Transform _interactionButton;
 
     public bool IsPushing()
     {
@@ -45,14 +45,8 @@ public class Box : MonoBehaviour
         }
         else
         {
-            InteractionButton(false);
             _rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
-    }
-
-    public void InteractionButton(bool value)
-    {
-        _interactionButton.SetActive(value);
     }
 
     public void SetPush(bool value)
@@ -71,11 +65,6 @@ public class Box : MonoBehaviour
             case "Box":
                 _isGrounded = true;
                 break;
-
-            case "Player":
-                if(collision.gameObject.GetComponent<PlayerCollider>().GetObj() != null && !_isTrigged)
-                    InteractionButton(true);
-                break;
         }
     }
 
@@ -90,7 +79,6 @@ public class Box : MonoBehaviour
 
             case "Player":
                 SetPush(false);
-                InteractionButton(false);
                 break;
         }
     }

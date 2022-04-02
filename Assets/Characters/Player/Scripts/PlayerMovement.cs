@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rb2D;
     private Vector2 _moveVelocity;
 
-    public Rigidbody2D RB2D()
+    public Rigidbody2D GetRB2D()
     {
         return _rb2D;
     }
