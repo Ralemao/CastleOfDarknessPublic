@@ -11,7 +11,6 @@ public class PlayerAnimation : MonoBehaviour
         return _anim;
     }
 
-    //Singleton instantation
     private static PlayerAnimation _instance;
     public static PlayerAnimation Instance
     {

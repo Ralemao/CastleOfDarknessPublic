@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
         return _isGrounded;
     }
 
-    //Singleton instantation
     private static PlayerController _instance;
     public static PlayerController Instance
     {

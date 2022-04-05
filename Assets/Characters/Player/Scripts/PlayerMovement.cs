@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
         return _rb2D;
     }
 
-    //Singleton instantation
     private static PlayerMovement _instance;
     public static PlayerMovement Instance
     {

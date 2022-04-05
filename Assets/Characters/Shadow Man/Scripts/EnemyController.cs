@@ -12,7 +12,6 @@ public class EnemyController : MonoBehaviour
         return _isGrounded;
     }
 
-    //Singleton instantation
     private static EnemyController _instance;
     public static EnemyController Instance
     {

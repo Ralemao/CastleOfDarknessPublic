@@ -52,7 +52,6 @@ public class PlayerCollider : MonoBehaviour
         return _obj;
     }
 
-    //Singleton instantation
     private static PlayerCollider _instance;
     public static PlayerCollider Instance
     {
