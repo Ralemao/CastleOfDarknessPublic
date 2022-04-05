@@ -77,16 +77,7 @@ public class PlayerCollider : MonoBehaviour
 
     private void Update()
     {
-        SetGravity();
         Interactions();
-    }
-
-    private void SetGravity()
-    {
-        if (!CheckIsGrounded())
-            PlayerMovement.Instance.GetRB2D().gravityScale = 40;
-        else
-            PlayerMovement.Instance.GetRB2D().gravityScale = 1;
     }
 
     private void Interactions()
@@ -104,87 +95,92 @@ public class PlayerCollider : MonoBehaviour
             _obj = lowHit.collider.gameObject;
 
             //Grab objects
-            if (_obj.CompareTag("Grabbable"))
+            switch (_obj.tag)
             {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    _isGrabbing = !_isGrabbing;
-                }
+                case "Grabbable":
 
-                if (_isGrabbing)
-                {
-                    InteractionButton(false);
-                    _obj.GetComponent<Grabbable>().transform.SetParent(_playerGrab);
-                }
-                else
-                {
-                    InteractionButton(true);
-                    _obj.GetComponent<Grabbable>().transform.SetParent(_obj.GetComponent<Grabbable>().GetGroupParent());
-                }
-            }
-
-            //Boxes interactions
-            else if (_obj.CompareTag("Box"))
-            {
-                Box objBox = _obj.GetComponent<Box>();
-
-                if (objBox != null)
-                {
-                    //Climb
-                    if (CheckIsGrounded() && PlayerMovement.Instance.CurrentSpeed() == 0 && !_canClimb)
+                    if (Input.GetKeyDown(KeyCode.E))
                     {
-                        InteractionButton(true);
-
-                        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) && !_isPushing)
-                            _canClimb = true;
-
-                        if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
-                            _canClimb = false;
+                        _isGrabbing = !_isGrabbing;
                     }
 
-                    //highHit is the limit for climbing
-                    if (!highHit && lowHit && _canClimb)
+                    if (_isGrabbing)
                     {
-                        _isClimbing = true;
                         InteractionButton(false);
-                    }
-
-                    //Push and pull obj
-                    if (_isPushing)
-                    {
-                        if (Input.GetKeyUp(KeyCode.E) || !objBox.IsPushing() || !CheckIsGrounded())
-                        {
-                            _isPushing = false;
-                            objBox.SetPush(false);
-
-                            if (Input.GetKeyUp(KeyCode.E))
-                                InteractionButton(true);
-
-                            _obj.GetComponent<FixedJoint2D>().enabled = false;
-                            _obj.GetComponent<FixedJoint2D>().connectedBody = null;
-                            objBox = null;
-                        }
+                        _obj.GetComponent<Grabbable>().transform.SetParent(_playerGrab);
                     }
                     else
                     {
-                        if (Input.GetKey(KeyCode.E) && objBox.GetGrounded() && CheckIsGrounded())
+                        InteractionButton(true);
+                        _obj.GetComponent<Grabbable>().transform.SetParent(_obj.GetComponent<Grabbable>().GetGroupParent());
+                    }
+                    break;
+
+                //Boxes interactions
+                case "Box":
+
+                    Box objBox = _obj.GetComponent<Box>();
+
+                    if (objBox != null)
+                    {
+                        _isPushing = objBox.IsPushing();
+
+                        //Climb
+                        //highHit is the limit for climbing
+                        if (CheckIsGrounded() && PlayerMovement.Instance.CurrentSpeed() == 0 && !_canClimb && !highHit)
                         {
-                            _isPushing = true;
-                            objBox.SetPush(true);
+                            InteractionButton(true);
+
+                            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) && !_isPushing)
+                                _canClimb = true;
+
+                            if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
+                                _canClimb = false;
+                        }
+
+                        if (_canClimb)
+                        {
+                            _isClimbing = true;
                             InteractionButton(false);
-                            _obj.GetComponent<FixedJoint2D>().enabled = true;
-                            _obj.GetComponent<FixedJoint2D>().connectedBody = PlayerMovement.Instance.GetRB2D();
+                        }
+
+                        //Push and pull obj
+                        if (_isPushing)
+                        {
+                            if (Input.GetKeyUp(KeyCode.E))
+                                InteractionButton(true);
+
+                            if (Input.GetKeyUp(KeyCode.E) || !CheckIsGrounded())
+                            {
+                                _isPushing = false;
+                                objBox.SetPush(false);
+
+                                _obj.GetComponent<FixedJoint2D>().enabled = false;
+                                _obj.GetComponent<FixedJoint2D>().connectedBody = null;
+                                objBox = null;
+                            }
+                        }
+                        else
+                        {
+                            if (Input.GetKey(KeyCode.E) && objBox.GetGrounded() && CheckIsGrounded())
+                            {
+                                _isPushing = true;
+                                objBox.SetPush(true);
+                                InteractionButton(false);
+                                _obj.GetComponent<FixedJoint2D>().enabled = true;
+                                _obj.GetComponent<FixedJoint2D>().connectedBody = PlayerMovement.Instance.GetRB2D();
+                            }
                         }
                     }
-                }
+                    break;
             }
         }
         else
         {
             InteractionButton(false);
             _obj = null;
-            if(_canClimb) _canClimb = false;
-            if(_isPushing) _isPushing = false;
+            _canClimb = false;
+            _isPushing = false;
         }
     }
 

@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!PlayerCollider.Instance.GetClimb())
+        if (!PlayerCollider.Instance.GetClimb() && PlayerController.Instance.GetGrounded())
             _rb2D.velocity = _moveVelocity * Time.fixedDeltaTime;
     }
 
