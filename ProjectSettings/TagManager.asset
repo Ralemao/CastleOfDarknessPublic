@@ -11,6 +11,7 @@ TagManager:
   - Grabbable
   - Platform
   - Enemy
+  - EnemyParticles
   layers:
   - Default
   - TransparentFX
