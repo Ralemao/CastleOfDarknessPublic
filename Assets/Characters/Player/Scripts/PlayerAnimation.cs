@@ -33,6 +33,11 @@ public class PlayerAnimation : MonoBehaviour
         _anim = transform.GetChild(0).GetComponent<Animator>();
     }
 
+    public void SetHolding(bool value)
+    {
+        _anim.SetBool("isHolding", value);
+    }
+
     public void SpeedAnim()
     {
         _anim.SetFloat("speed", PlayerMovement.Instance.CurrentSpeed());

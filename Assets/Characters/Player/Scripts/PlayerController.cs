@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private float _deathTimer;
     private bool _canMove;
     private bool _isGrounded;
+    public bool _isHolding;
 
     public bool GetGrounded()
     {
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
 
         PlayerMovement.Instance.enabled = _canMove;
         PlayerCollider.Instance.enabled = _canMove;
+        PlayerAnimation.Instance.SetHolding(_isHolding);
     }
 
     public void SetDeath()

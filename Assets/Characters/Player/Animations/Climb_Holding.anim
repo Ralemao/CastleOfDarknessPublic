@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Climb
+  m_Name: Climb_Holding
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -29,6 +29,15 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -39,9 +48,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -467307283419413426, guid: ba5920c15eec68942a9bad0559b4f00c, type: 3}
+      value: {fileID: 2265148178292399212, guid: 83a5341e32c152e4892a629770850065, type: 3}
     - time: 0.6
-      value: {fileID: -467307283419413426, guid: ba5920c15eec68942a9bad0559b4f00c, type: 3}
+      value: {fileID: 2265148178292399212, guid: 83a5341e32c152e4892a629770850065, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -68,8 +77,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -467307283419413426, guid: ba5920c15eec68942a9bad0559b4f00c, type: 3}
-    - {fileID: -467307283419413426, guid: ba5920c15eec68942a9bad0559b4f00c, type: 3}
+    - {fileID: 2265148178292399212, guid: 83a5341e32c152e4892a629770850065, type: 3}
+    - {fileID: 2265148178292399212, guid: 83a5341e32c152e4892a629770850065, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -97,6 +106,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
