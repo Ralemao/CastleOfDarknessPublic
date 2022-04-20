@@ -1,49 +1,49 @@
 fileFormatVersion: 2
-guid: 4c82a0bcd1f4f824fa80ac3ac7334ade
+guid: cb3f6d53886149140b6845620747c522
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 523844683030640136
-    second: Walk 1_0
+      213: -8666045057275691642
+    second: Main Chracter Walk Holding Lantern_0
   - first:
-      213: -5512362066219966912
-    second: Walk 1_1
+      213: 5958199540255624388
+    second: Main Chracter Walk Holding Lantern_1
   - first:
-      213: 5764517470042293013
-    second: Walk 1_2
+      213: 1916825913447280461
+    second: Main Chracter Walk Holding Lantern_2
   - first:
-      213: 4185009363995111261
-    second: Walk 1_3
+      213: -2166360892888243775
+    second: Main Chracter Walk Holding Lantern_3
   - first:
-      213: 5052056608758846958
-    second: Walk 1_4
+      213: -3944051084721036735
+    second: Main Chracter Walk Holding Lantern_4
   - first:
-      213: -6357181456617676392
-    second: Walk 1_5
+      213: 894406268345946690
+    second: Main Chracter Walk Holding Lantern_5
   - first:
-      213: -7371446534094690976
-    second: Walk 1_6
+      213: -8172258006907000772
+    second: Main Chracter Walk Holding Lantern_6
   - first:
-      213: -8226971708569174350
-    second: Walk 1_7
+      213: 1484276291935715065
+    second: Main Chracter Walk Holding Lantern_7
   - first:
-      213: -5019310740695789412
-    second: Walk 1_8
+      213: -4050062897857393234
+    second: Main Chracter Walk Holding Lantern_8
   - first:
-      213: 2537963304582287652
-    second: Walk 1_9
+      213: 3326620906684206098
+    second: Main Chracter Walk Holding Lantern_9
   - first:
-      213: -636974880654086245
-    second: Walk 1_10
+      213: 1140112067337766845
+    second: Main Chracter Walk Holding Lantern_10
   - first:
-      213: 1236346740877022075
-    second: Walk 1_11
+      213: 1484946950663104234
+    second: Main Chracter Walk Holding Lantern_11
   - first:
-      213: -1132522220138360733
-    second: Walk 1_12
+      213: 7796456027107672457
+    second: Main Chracter Walk Holding Lantern_12
   - first:
-      213: -1690511161643701876
-    second: Walk 1_13
+      213: 7291539884074836961
+    second: Main Chracter Walk Holding Lantern_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,31 +130,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -177,11 +153,35 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk 1_0
+      name: Main Chracter Walk Holding Lantern_0
       rect:
         serializedVersion: 2
         x: 0
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 806b489b6f1154700800000000000000
-      internalID: 523844683030640136
+      spriteID: 68d7d816fe50cb780800000000000000
+      internalID: -8666045057275691642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_1
+      name: Main Chracter Walk Holding Lantern_1
       rect:
         serializedVersion: 2
         x: 64
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04ede9118e72083b0800000000000000
-      internalID: -5512362066219966912
+      spriteID: 4cc05d9f9e6cfa250800000000000000
+      internalID: 5958199540255624388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_2
+      name: Main Chracter Walk Holding Lantern_2
       rect:
         serializedVersion: 2
         x: 128
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5138767e81eafff40800000000000000
-      internalID: 5764517470042293013
+      spriteID: d4fe943330fe99a10800000000000000
+      internalID: 1916825913447280461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_3
+      name: Main Chracter Walk Holding Lantern_3
       rect:
         serializedVersion: 2
         x: 192
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5fac9ae7d3241a30800000000000000
-      internalID: 4185009363995111261
+      spriteID: 1c1291cee3a8fe1e0800000000000000
+      internalID: -2166360892888243775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_4
+      name: Main Chracter Walk Holding Lantern_4
       rect:
         serializedVersion: 2
         x: 256
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee55c3ef7b28c1640800000000000000
-      internalID: 5052056608758846958
+      spriteID: 14265375f6ae349c0800000000000000
+      internalID: -3944051084721036735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_5
+      name: Main Chracter Walk Holding Lantern_5
       rect:
         serializedVersion: 2
         x: 320
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8916a91a521c6c7a0800000000000000
-      internalID: -6357181456617676392
+      spriteID: 24294a523c1996c00800000000000000
+      internalID: 894406268345946690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_6
+      name: Main Chracter Walk Holding Lantern_6
       rect:
         serializedVersion: 2
         x: 384
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 065608ece6c53b990800000000000000
-      internalID: -7371446534094690976
+      spriteID: c38677524ae469e80800000000000000
+      internalID: -8172258006907000772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_7
+      name: Main Chracter Walk Holding Lantern_7
       rect:
         serializedVersion: 2
         x: 448
@@ -342,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bebb85c1dce3dd80800000000000000
-      internalID: -8226971708569174350
+      spriteID: 9febc596c65399410800000000000000
+      internalID: 1484276291935715065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_8
+      name: Main Chracter Walk Holding Lantern_8
       rect:
         serializedVersion: 2
         x: 512
@@ -363,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c90568b8973d75ab0800000000000000
-      internalID: -5019310740695789412
+      spriteID: ead8837a0494bc7c0800000000000000
+      internalID: -4050062897857393234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_9
+      name: Main Chracter Walk Holding Lantern_9
       rect:
         serializedVersion: 2
         x: 576
@@ -384,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4219a96cd28a83320800000000000000
-      internalID: 2537963304582287652
+      spriteID: 21ccc45e6188a2e20800000000000000
+      internalID: 3326620906684206098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_10
+      name: Main Chracter Walk Holding Lantern_10
       rect:
         serializedVersion: 2
         x: 640
@@ -405,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9f24cb88b20927f0800000000000000
-      internalID: -636974880654086245
+      spriteID: db7cdc972ed72df00800000000000000
+      internalID: 1140112067337766845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_11
+      name: Main Chracter Walk Holding Lantern_11
       rect:
         serializedVersion: 2
         x: 704
@@ -426,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b73df257fc2682110800000000000000
-      internalID: 1236346740877022075
+      spriteID: ae6e29052679b9410800000000000000
+      internalID: 1484946950663104234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_12
+      name: Main Chracter Walk Holding Lantern_12
       rect:
         serializedVersion: 2
         x: 768
@@ -447,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3609a688a097840f0800000000000000
-      internalID: -1132522220138360733
+      spriteID: 981c4b20373923c60800000000000000
+      internalID: 7796456027107672457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1_13
+      name: Main Chracter Walk Holding Lantern_13
       rect:
         serializedVersion: 2
         x: 832
@@ -468,8 +468,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c89e4612e091a88e0800000000000000
-      internalID: -1690511161643701876
+      spriteID: 1e3afdf64e0c03560800000000000000
+      internalID: 7291539884074836961
       vertices: []
       indices: 
       edges: []

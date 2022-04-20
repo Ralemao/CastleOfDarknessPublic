@@ -1,9 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAnimation : MonoBehaviour
 {
+    [SerializeField] 
+    private SpriteRenderer _mainSprite;
+    [SerializeField] 
+    private SpriteRenderer _effectSprite;
+
     private Animator _anim;
 
     public Animator Anim()
@@ -31,6 +37,16 @@ public class EnemyAnimation : MonoBehaviour
     void Start()
     {
         _anim = transform.GetChild(0).GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        UpdateSprite();
+    }
+
+    private void UpdateSprite()
+    {
+        _effectSprite.sprite = _mainSprite.sprite;
     }
 
     public void SpeedAnim()
