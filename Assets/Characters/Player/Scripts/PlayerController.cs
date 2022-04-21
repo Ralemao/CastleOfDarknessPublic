@@ -44,6 +44,9 @@ public class PlayerController : MonoBehaviour
         PlayerMovement.Instance.enabled = _canMove;
         PlayerCollider.Instance.enabled = _canMove;
         PlayerAnimation.Instance.SetHolding(_isHolding);
+
+        if (Input.GetKeyDown(KeyCode.Q))
+            _isHolding = !_isHolding;
     }
 
     public void SetDeath()

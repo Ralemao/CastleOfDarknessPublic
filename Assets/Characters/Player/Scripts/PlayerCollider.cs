@@ -32,6 +32,11 @@ public class PlayerCollider : MonoBehaviour
         return _isClimbing;
     }
 
+    public bool GetGrabbing()
+    {
+        return _isGrabbing;
+    }
+
     [Header("Layers")]
     [SerializeField]
     private LayerMask _objMask;

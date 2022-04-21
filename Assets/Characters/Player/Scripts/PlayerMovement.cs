@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
             PlayerCollider.Instance.SetClimb(false);
             PlayerAnimation.Instance.ClimbAnim();
 
-            if (PlayerAnimation.Instance.Anim().GetCurrentAnimatorStateInfo(0).IsName("Climb"))
+            if (PlayerAnimation.Instance.Anim().GetCurrentAnimatorStateInfo(0).IsName("Climb") || PlayerAnimation.Instance.Anim().GetCurrentAnimatorStateInfo(0).IsName("Climb_Holding"))
                 transform.position = new Vector2(transform.position.x + (_xClimb * transform.localScale.x), transform.position.y + _yClimb);
         }
     }
