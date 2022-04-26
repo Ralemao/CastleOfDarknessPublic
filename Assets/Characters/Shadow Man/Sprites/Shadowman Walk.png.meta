@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -292,6 +293,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Shadowman Walk_2: 7194002436139366819
+      Shadowman Walk_3: -6915549337588026230
+      Shadowman Walk_1: 3565184249535101153
+      Shadowman Walk_4: -3824545006227138014
+      Shadowman Walk_0: 2694760121137901875
+      Shadowman Walk_5: 745542613894169856
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

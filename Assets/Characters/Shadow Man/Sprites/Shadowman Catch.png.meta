@@ -54,6 +54,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -388,6 +389,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Shadowman Catch_2: -8817243136143797087
+      Shadowman Catch_8: 7254787433184253936
+      Shadowman Catch_5: -3848686686754090573
+      Shadowman Catch_6: 7840501692318677517
+      Shadowman Catch_1: 5568349886858991200
+      Shadowman Catch_4: -3933815163210453127
+      Shadowman Catch_0: -2113486033527146506
+      Shadowman Catch_3: -4999892664026305793
+      Shadowman Catch_7: -3226808860375640230
+      Shadowman Catch_9: -6341224492018795468
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

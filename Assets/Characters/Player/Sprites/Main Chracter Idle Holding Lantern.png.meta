@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -292,6 +293,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Main Chracter Idle Holding Lantern_1: -2262971367810150495
+      Main Chracter Idle Holding Lantern_4: 2585589321689055640
+      Main Chracter Idle Holding Lantern_0: 2265148178292399212
+      Main Chracter Idle Holding Lantern_2: -8319564969128767156
+      Main Chracter Idle Holding Lantern_3: -3275588762502327442
+      Main Chracter Idle Holding Lantern_5: -4698484285722461107
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

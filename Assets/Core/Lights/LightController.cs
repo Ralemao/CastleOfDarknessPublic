@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Experimental.Rendering.Universal;
+
 using UnityEngine;
 
 public class LightController : MonoBehaviour
@@ -31,7 +31,7 @@ public class LightController : MonoBehaviour
     {
         _isOn = value;
         //GetComponent<BoxCollider2D>().enabled = value;
-        GetComponent<Light2D>().enabled = value;
+        GetComponent<UnityEngine.Rendering.Universal.Light2D>().enabled = value;
         transform.GetChild(0).GetComponent<CircleCollider2D>().enabled = value;
     }
 

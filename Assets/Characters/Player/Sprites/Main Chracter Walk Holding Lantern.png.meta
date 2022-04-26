@@ -66,6 +66,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -484,6 +485,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Main Chracter Walk Holding Lantern_7: 1484276291935715065
+      Main Chracter Walk Holding Lantern_10: 1140112067337766845
+      Main Chracter Walk Holding Lantern_11: 1484946950663104234
+      Main Chracter Walk Holding Lantern_8: -4050062897857393234
+      Main Chracter Walk Holding Lantern_5: 894406268345946690
+      Main Chracter Walk Holding Lantern_9: 3326620906684206098
+      Main Chracter Walk Holding Lantern_13: 7291539884074836961
+      Main Chracter Walk Holding Lantern_3: -2166360892888243775
+      Main Chracter Walk Holding Lantern_2: 1916825913447280461
+      Main Chracter Walk Holding Lantern_4: -3944051084721036735
+      Main Chracter Walk Holding Lantern_6: -8172258006907000772
+      Main Chracter Walk Holding Lantern_12: 7796456027107672457
+      Main Chracter Walk Holding Lantern_0: -8666045057275691642
+      Main Chracter Walk Holding Lantern_1: 5958199540255624388
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
