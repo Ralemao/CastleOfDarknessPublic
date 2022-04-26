@@ -41,7 +41,7 @@ public class EnemyAnimation : MonoBehaviour
 
     void Update()
     {
-        UpdateSprite();
+        //UpdateSprite();
     }
 
     private void UpdateSprite()

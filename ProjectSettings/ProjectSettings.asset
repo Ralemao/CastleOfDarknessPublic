@@ -846,6 +846,7 @@ PlayerSettings:
     Build: 0
     Collab: 0
     Game Performance: 0
+    Legacy Analytics: 0
     Purchasing: 0
     UDP: 0
     Unity Ads: 0
@@ -862,7 +863,7 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 
+  cloudProjectId: 65b5c9c7-883c-48b6-998a-f12a49b9e613
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: CastleOfDarkness
