@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private float _deathTimer;
     private bool _canMove;
     private bool _isGrounded;
-    public bool _isHolding;
+    private bool _isHolding;
 
     public bool GetGrounded()
     {
